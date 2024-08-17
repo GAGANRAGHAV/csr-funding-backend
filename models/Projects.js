@@ -8,6 +8,7 @@ const ProjectSchema = new mongoose.Schema({
   moneyrequired: { type: Number, required: true },
   moneallocated: { type: Number },
   image: { type: String, required: true },
+  location: {type:String,required:true},
 });
 
 const Project = mongoose.model("Project", ProjectSchema);

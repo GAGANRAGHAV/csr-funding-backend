@@ -38,7 +38,7 @@ export const getproject = async (req, res) => {
     const project = await Project.find();
     res
       .status(200)
-      .json({ project, message: "Projects retrieved successfully" });
+      .json({ project });
   } catch (error) {
     console.error("Error retrieving projects:", error);
     // Log the error for debugging
@@ -53,7 +53,7 @@ export const getprojectbyid = async (req, res) => {
         return res.status(404).json({ message: "Project not found" });
       }
   
-      res.status(200).json({ project, message: "Project retrieved successfully" });
+      res.status(200).json({ project});
     } catch (error) {
       console.error("Error retrieving project:", error);
       res.status(500).json({ message: "Server error while retrieving project" });

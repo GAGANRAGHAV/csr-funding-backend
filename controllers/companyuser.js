@@ -24,7 +24,7 @@ export const registercompany = async (req, res) => {
   const token = jwt.sign({ userId: newCompany._id }, JWT_SECRET, {
     expiresIn: "1h",
   });
-  res.status(201).json({ token });
+  res.status(201).json({ token ,newCompany});
 };
 
 export const loginCompany =  async (req, res) => {
@@ -43,5 +43,5 @@ export const loginCompany =  async (req, res) => {
 
   const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: "1h" });
 
-  res.status(200).json({ token});
+  res.status(200).json({ token,user});
 };

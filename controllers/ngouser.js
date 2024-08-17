@@ -24,7 +24,7 @@ export const registerngo = async (req, res) => {
   const token = jwt.sign({ userId: newNgo._id }, JWT_SECRET, {
     expiresIn: "1h",
   });
-  res.status(201).json({ token });
+  res.status(201).json({ token,newNgo });
 };
 
 export const loginngo =  async (req, res) => {
@@ -43,5 +43,5 @@ export const loginngo =  async (req, res) => {
 
   const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: "1h" });
 
-  res.status(200).json({ token});
+  res.status(200).json({ token,user});
 };
