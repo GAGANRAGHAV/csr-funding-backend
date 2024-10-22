@@ -2,7 +2,7 @@ import Project from "../models/Projects.js";
 import Ngo from "../models/ngo.js";
 
 export const createproject = async (req, res) => {
-  const { name, description, ngo, moneyrequired, image } = req.body;
+  const { name, description, ngo, moneyrequired, image ,location} = req.body;
 
   // Validation (optional, but recommended)
   if (!name || !description || !ngo || !moneyrequired) {
@@ -21,6 +21,7 @@ export const createproject = async (req, res) => {
       ngo,
       moneyrequired,
       image,
+      location,
     });
 
     await project.save();
@@ -59,6 +60,8 @@ export const getprojectbyid = async (req, res) => {
       res.status(500).json({ message: "Server error while retrieving project" });
     }
 };
+
+
 
 
   
