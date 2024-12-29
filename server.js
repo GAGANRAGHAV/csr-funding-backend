@@ -23,7 +23,7 @@ app.use('/api', userroutes);
 
 const PORT =process.env.PORT || 5000;
 
-mongoose.connect('mongodb+srv://gaganraghav143:bicx13oInLIPt3iB@cluster0.yzbwg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://gaganraghav143:tTlCKPDuGFKDlX74@cluster0.4jvi7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
         .then(()=> {console.log("connected to database")})
         .catch(()=> console.log("could not connect to database"));
 
